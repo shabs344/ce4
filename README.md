@@ -408,4 +408,195 @@ class menu{
 				i++;
 				}
 			}
+			void editprofile(){
+						Scanner sc = new Scanner(System.in);
+						System.out.println("_____________Edit profilr_____________");
+						System.out.println("1.change hotel name");
+						System.out.print("Enter your choise : ");
+						ch=sc.nextInt();
+						switch(ch)
+						{	
+							case 1:
+								System.out.print("Enter new name of hotel : ");
+								hotelName=sc.next();
+						}
+					}
+		void removeitem()
+		{
 			
+		
+			Scanner sc = new Scanner(System.in);
+			boolean flag0,flag1;
+			String Item;
+			int prize;
+			int ch;
+			displayMainMenu(main_menu);
+			System.out.print("Which catogeory : ");
+			ch=sc.nextInt();
+			System.out.print("Enter intem name to be remove : ");
+			Item=sc.next();
+			switch(ch)
+			{
+			
+				case 1:
+					int i,j;
+					boolean flag;
+			      		for(i=0;i<list_southIndian.size();i++)
+					{
+						flag=list_southIndian.get(i).equals(Item);
+						if(flag==true)
+						{
+							list_southIndian.remove(i);
+							prize_southIndian.remove(i);
+						}
+						
+					}	
+				break;
+					
+				case 2:
+			      		for(i=0;i<list_gujarati.size();i++)
+					{
+						flag=list_gujarati.get(i).equals(Item);
+						if(flag==true)
+						{
+							list_gujarati.remove(i);
+							prize_gujarati.remove(i);
+						}
+						
+					}
+				break;
+
+				case 3:
+
+
+			      		for(i=0;i<list_chainies.size();i++)
+					{
+						flag=list_chainies.get(i).equals(Item);
+						if(flag==true)
+						{
+							list_chainies.remove(i);
+							prize_chainies.remove(i);
+						}
+						
+					}
+				break;
+			
+				case 4:
+	
+	
+			      		for(i=0;i<list_panjabi.size();i++)
+					{
+						flag=list_panjabi.get(i).equals(Item);
+						if(flag==true)
+						{
+							list_panjabi.remove(i);
+							prize_panjabi.remove(i);
+						}
+						
+					}
+				break;
+				case 5:
+	
+	
+			      		for(i=0;i<list_tea.size();i++)
+					{
+						flag=list_tea.get(i).equals(Item);
+						if(flag==true)
+						{
+							list_tea.remove(i);
+							list_tea.remove(i);
+						}
+						
+					}
+
+				break;
+			
+				case 6:
+					
+			      		for(i=0;i<list_icecream.size();i++)
+					{
+						flag=list_icecream.get(i).equals(Item);
+						if(flag==true)
+						{
+							list_icecream.remove(i);
+							prize_icecream.remove(i);
+						}
+						
+					}
+				break;
+				case 7:
+					for(i=0;i<list_local.size();i++)
+					{
+						flag=list_local.get(i).equals(Item);
+						if(flag==true)
+						{
+							list_local.remove(i);
+							prize_local.remove(i);
+						}
+						
+					}
+				break;
+				default:
+					System.out.println("_______Invalid choise_______");
+				break;	
+			}
+		}	
+		void additem()
+		{
+			Scanner sc = new Scanner(System.in);
+			boolean flag;
+			String Item;
+			int prize;
+			int ch;
+			System.out.print("Enter intem name to be Add : ");
+			Item=sc.next();
+			System.out.print("Enter Prize of Item : ");
+			prize=sc.nextInt();
+			System.out.println("__________catageory____________");
+			System.out.println("1.South Indian");
+			System.out.println("2.Gujarati");
+			System.out.println("3.chainies");
+			System.out.println("4.panjabi");
+			System.out.println("5.tea");
+			System.out.println("6.icecrime");
+			System.out.println("7.Local of kutch");
+			System.out.print("Which catogeory : ");
+			ch=sc.nextInt();
+			switch(ch)
+			{
+			
+				case 1:
+					list_southIndian.add(Item);
+					prize_southIndian.add(prize);
+				break;
+					
+				case 2:
+					list_gujarati.add(Item);
+					prize_gujarati.add(prize);
+				break;
+
+				case 3:
+					list_chainies.add(Item);
+					prize_chainies.add(prize);
+				break;
+			
+				case 4:
+					list_panjabi.add(Item);
+					prize_panjabi.add(prize);
+				break;
+
+				case 5:
+					list_icecream.add(Item);
+					prize_icecream.add(prize);
+				break;
+			
+				case 6:
+					list_local.add(Item);
+					prize_local.add(prize);
+				break;
+				default:
+					System.out.println("_______Invalid choise1_______");
+				break;	
+			}
+}
+}
